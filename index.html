@@ -1,0 +1,99 @@
+---
+layout: default
+---
+<section class="intro" aria-labelledby="intro-title">
+  <h1 id="intro-title" class="intro__name">Andrea Toscano</h1>
+  <p class="intro__role">Incident response &amp; threat hunting at Deloitte, Turin</p>
+  <div class="intro__text">
+    <p>I work in Deloitte&rsquo;s Crisis Management &amp; Incident Response team on threat hunting, incident response and digital forensics for enterprise environments. My work runs from hypothesis-driven hunts mapped to MITRE ATT&amp;CK to triage, containment and forensic reconstruction of attacker activity on Windows and Linux.</p>
+    <p>My offensive security background comes from six years of CTF competitions and the OSCP+, and it shapes how I design hunting hypotheses and detections.</p>
+  </div>
+  <ul class="links intro__links">
+    {% if site.author.email != "" %}<li><a href="mailto:{{ site.author.email }}">Email</a></li>{% endif %}
+    <li><a href="{{ site.author.linkedin }}" rel="me">LinkedIn</a></li>
+    {% if site.author.github and site.author.github != 'USERNAME' %}
+    <li><a href="https://github.com/{{ site.author.github }}" rel="me">GitHub</a></li>
+    {% endif %}
+  </ul>
+</section>
+
+{% assign entries = site.posts | concat: site.writeups | sort: 'date' | reverse %}
+{% if entries.size > 0 %}
+<section class="block" aria-labelledby="writing-title">
+  <h2 id="writing-title">Latest writing</h2>
+  <ul class="entries">
+    {% for entry in entries limit: 5 %}
+      {% include entry.html entry=entry %}
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="block" aria-labelledby="experience-title">
+  <h2 id="experience-title">Experience</h2>
+  {% assign work = site.data.experience | where_exp: "e", "e.education != true" %}
+  <ol class="timeline">
+    {% for item in work %}
+    <li class="timeline__item{% if forloop.first %} is-current{% endif %}">
+      <p class="timeline__when"><span>{{ item.start | escape }}</span><span>{{ item.end | escape }}</span></p>
+      <div class="timeline__body">
+        <h3>{{ item.role | escape }}</h3>
+        <p class="timeline__org">{{ item.org | escape }}, {{ item.place | escape }}</p>
+        {% if item.summary %}<p>{{ item.summary | escape }}</p>{% endif %}
+        {% if item.points %}
+        <ul class="timeline__points">
+          {% for point in item.points %}<li>{{ point | escape }}</li>{% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<div class="split">
+  <section class="block" aria-labelledby="certs-title">
+    <h2 id="certs-title">Certifications</h2>
+    <dl class="certs">
+      {% for cert in site.data.certifications %}
+      <div class="certs__row">
+        <dt translate="no">{{ cert.name | escape }}</dt>
+        <dd>{{ cert.full | escape }}{% if cert.issuer %}<span class="certs__issuer">{{ cert.issuer | escape }}</span>{% endif %}</dd>
+      </div>
+      {% endfor %}
+    </dl>
+  </section>
+
+  <div>
+  <section class="block" aria-labelledby="edu-title">
+    <h2 id="edu-title">Education</h2>
+    {% assign edu = site.data.experience | where_exp: "e", "e.education == true" %}
+    <ul class="edu">
+      {% for item in edu %}
+      <li>
+        <h3>{{ item.role | escape }}</h3>
+        <p>{{ item.org | escape }}, {{ item.end | escape }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="platforms-title">
+    <h2 id="platforms-title">Platforms</h2>
+    <ul class="tags" translate="no">
+      <li>Microsoft Defender XDR</li>
+      <li>Microsoft Sentinel</li>
+      <li>CrowdStrike Falcon</li>
+      <li>SentinelOne</li>
+      <li>Cortex XDR</li>
+    </ul>
+  </section>
+  </div>
+</div>
+
+{% if site.data.projects.size > 0 %}
+<section class="block" aria-labelledby="projects-title">
+  <h2 id="projects-title">Projects</h2>
+  {% include projects.html %}
+</section>
+{% endif %}

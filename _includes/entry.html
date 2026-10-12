@@ -1,0 +1,12 @@
+{% assign e = include.entry %}
+<li class="entry">
+  <a class="entry__link" href="{{ e.url | relative_url }}">
+    <span class="entry__title">{{ e.title | escape }}</span>
+    <span class="entry__meta">
+      <time datetime="{{ e.date | date_to_xmlschema }}">{{ e.date | date: '%d %b %Y' }}</time>
+      {% if include.show_kind != false %}<span>{{ e.kind | escape }}</span>{% endif %}
+      {% if e.event %}<span>{{ e.event | escape }}</span>{% endif %}
+    </span>
+  </a>
+  {% if e.summary %}<p class="entry__summary">{{ e.summary | escape }}</p>{% endif %}
+</li>

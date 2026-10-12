@@ -1,0 +1,17 @@
+---
+layout: default
+title: Writeups
+description: CTF and lab writeups on forensics, threat hunting and offensive security.
+---
+<section class="page-head">
+  <h1>Writeups</h1>
+  <p>CTF and lab writeups on forensics, threat hunting and offensive security.</p>
+</section>
+{% assign items = site.writeups | sort: 'date' | reverse %}
+{% if items.size > 0 %}
+<ul class="entries">
+  {% for entry in items %}{% include entry.html entry=entry show_kind=false %}{% endfor %}
+</ul>
+{% else %}
+<p class="empty">No writeups published yet. New ones will appear here.</p>
+{% endif %}

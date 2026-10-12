@@ -1,0 +1,11 @@
+<ul class="entries">
+  {% for p in site.data.projects %}
+  <li class="entry">
+    <a class="entry__link" href="{{ p.url }}">
+      <span class="entry__title">{{ p.name | escape }}</span>
+      {% if p.tags %}<span class="entry__meta">{% for t in p.tags %}<span>{{ t | escape }}</span>{% endfor %}</span>{% endif %}
+    </a>
+    {% if p.description %}<p class="entry__summary">{{ p.description | escape }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

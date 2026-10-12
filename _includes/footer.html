@@ -1,0 +1,17 @@
+<footer class="site-footer" id="contact">
+  <div class="wrap site-footer__inner">
+    {% if site.author.email != "" %}
+    <p class="site-footer__lead">For professional enquiries, write to <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.</p>
+    {% else %}
+    <p class="site-footer__lead">For professional enquiries, contact me on <a href="{{ site.author.linkedin }}">LinkedIn</a>.</p>
+    {% endif %}
+    <ul class="links">
+      <li><a href="{{ site.author.linkedin }}" rel="me">LinkedIn</a></li>
+      {% if site.author.github and site.author.github != 'USERNAME' %}
+      <li><a href="https://github.com/{{ site.author.github }}" rel="me">GitHub</a></li>
+      {% endif %}
+      <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
+    </ul>
+    <p class="site-footer__meta">&copy; {{ site.time | date: '%Y' }} Andrea Toscano, {{ site.author.location }}</p>
+  </div>
+</footer>

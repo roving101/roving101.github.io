@@ -1,0 +1,42 @@
+- start: "Jul 2025"
+  end: "Present"
+  role: Security Consultant, Crisis Management & Incident Response
+  org: Deloitte
+  place: Turin
+  summary: Threat hunting, incident response and digital forensics for enterprise clients.
+  points:
+    - Conducted 30+ hypothesis-driven threat hunts mapped to MITRE ATT&CK across Microsoft Defender, Sentinel, Cortex XDR, SentinelOne and CrowdStrike Falcon.
+    - Supported the investigation and containment of 10+ incidents, including forensic analysis of Windows and Linux systems to reconstruct attacker activity and assess impact.
+    - Developed 20+ detection and hunting queries adopted in production.
+
+- start: "Feb 2024"
+  end: "Jul 2025"
+  role: Security Consultant
+  org: BIP
+  place: Milan
+  summary: Security strategy consulting for enterprise clients, covering vulnerability management, security technology selection and data protection.
+  points:
+    - Supported clients in structuring and running vulnerability management processes, from assessment planning to remediation tracking.
+    - Evaluated and compared security solutions (DLP, firewall, XDR) to support clients' technology selection and adoption.
+    - Supported data anonymisation initiatives to meet data protection requirements.
+
+- start: "Dec 2023"
+  end: "Jan 2024"
+  role: Teacher, Digital Introduction Course
+  org: ADN, Associazione Diritti Negati
+  place: Turin
+  summary: Online safety and anti-phishing awareness sessions for older adults in community centres.
+
+- start: "2022"
+  end: "Apr 2024"
+  role: MSc in Computer Engineering, Cybersecurity
+  org: Politecnico di Torino
+  place: Turin
+  education: true
+
+- start: "2017"
+  end: "Mar 2021"
+  role: BSc in Computer Engineering
+  org: Politecnico di Torino
+  place: Turin
+  education: true

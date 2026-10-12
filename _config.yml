@@ -1,0 +1,55 @@
+title: Andrea Toscano
+description: >-
+  Incident response, threat hunting and digital forensics for enterprise
+  environments. Security Consultant at Deloitte, Turin.
+lang: en
+
+# The repository must be named roving101.github.io
+url: "https://roving101.github.io"
+baseurl: ""
+
+author:
+  name: Andrea Toscano
+  # Professional email: when filled in, it appears in the intro and footer
+  email: ""
+  location: Turin, Italy
+  linkedin: https://www.linkedin.com/in/toscano-andrea
+  github: roving101
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: /blog/:year/:title/
+
+collections:
+  writeups:
+    output: true
+    permalink: /writeups/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      kind: Article
+  - scope:
+      path: ""
+      type: writeups
+    values:
+      layout: post
+      kind: Writeup
+
+exclude:
+  - README.md
+  - templates/
+  - Gemfile
+  - Gemfile.lock

@@ -1,0 +1,14 @@
+---
+layout: default
+title: Projects
+description: Tools, detection content and other security projects.
+---
+<section class="page-head">
+  <h1>Projects</h1>
+  <p>Tools, detection content and other security projects.</p>
+</section>
+{% if site.data.projects.size > 0 %}
+{% include projects.html %}
+{% else %}
+<p class="empty">No projects published yet. New ones will appear here.</p>
+{% endif %}

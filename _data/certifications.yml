@@ -1,0 +1,17 @@
+- name: OSCP+
+  full: OffSec Certified Professional
+  issuer: OffSec
+- name: eCTHP
+  full: Certified Threat Hunting Professional
+  issuer: INE Security
+- name: BTL1
+  full: Blue Team Level 1
+  issuer: Security Blue Team
+- name: Security+
+  full: CompTIA Security+
+  issuer: CompTIA
+- name: ISO/IEC 27001 LA
+  full: ISO/IEC 27001:2022 Lead Auditor
+- name: CrowdStrike SIEM 211a
+  full: Incident Response and Investigation with Falcon Next-Gen SIEM
+  issuer: CrowdStrike

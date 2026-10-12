@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<article class="article">
+  <header class="article__head">
+    {% if page.collection == 'writeups' %}{% assign back = '/writeups/' %}{% assign back_label = 'All writeups' %}{% else %}{% assign back = '/blog/' %}{% assign back_label = 'All articles' %}{% endif %}
+    <p class="article__back"><a href="{{ back | relative_url }}">{{ back_label }}</a></p>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="entry__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d %B %Y' }}</time>
+      {% if page.event %}<span>{{ page.event | escape }}</span>{% endif %}
+      {% if page.category_name %}<span>{{ page.category_name | escape }}</span>{% endif %}
+      {% if page.difficulty %}<span>{{ page.difficulty | escape }}</span>{% endif %}
+    </p>
+    {% if page.attack %}
+    <ul class="tags" translate="no" aria-label="MITRE ATT&amp;CK techniques">
+      {% for t in page.attack %}<li><a href="https://attack.mitre.org/techniques/{{ t | replace: '.', '/' }}/">{{ t }}</a></li>{% endfor %}
+    </ul>
+    {% endif %}
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

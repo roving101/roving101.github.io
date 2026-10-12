@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+description: Articles on threat hunting, incident response and detection engineering.
+---
+<section class="page-head">
+  <h1>Blog</h1>
+  <p>Articles on threat hunting, incident response and detection engineering.</p>
+</section>
+{% if site.posts.size > 0 %}
+<ul class="entries">
+  {% for entry in site.posts %}{% include entry.html entry=entry show_kind=false %}{% endfor %}
+</ul>
+{% else %}
+<p class="empty">No articles published yet. New ones will appear here.</p>
+{% endif %}

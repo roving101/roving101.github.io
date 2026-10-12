@@ -1,0 +1,8 @@
+# Add one entry per project. The Projects section appears on the site
+# as soon as this list has at least one item. Example:
+#
+# - name: sentinel-hunting-queries
+#   description: KQL hunting queries for Microsoft Sentinel, mapped to MITRE ATT&CK.
+#   url: https://github.com/roving101/sentinel-hunting-queries
+#   tags: [KQL, Sentinel, Detection]
+[]

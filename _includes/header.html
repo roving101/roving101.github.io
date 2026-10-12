@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="site-name" href="{{ '/' | relative_url }}">Andrea Toscano</a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        {% assign path = page.url %}
+        <li><a href="{{ '/writeups/' | relative_url }}"{% if path contains '/writeups/' %} aria-current="page"{% endif %}>Writeups</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}"{% if path contains '/blog/' %} aria-current="page"{% endif %}>Blog</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}"{% if path contains '/projects/' %} aria-current="page"{% endif %}>Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
