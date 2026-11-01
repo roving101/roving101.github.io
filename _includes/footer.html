@@ -2,16 +2,18 @@
   <div class="wrap site-footer__inner">
     {% if site.author.email != "" %}
     <p class="site-footer__lead">For professional enquiries, write to <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.</p>
-    {% else %}
-    <p class="site-footer__lead">For professional enquiries, contact me on <a href="{{ site.author.linkedin }}">LinkedIn</a>.</p>
+    {% elsif site.author.github and site.author.github != 'USERNAME' %}
+    <p class="site-footer__lead">For professional enquiries, reach me on <a href="https://github.com/{{ site.author.github }}">GitHub</a>.</p>
     {% endif %}
     <ul class="links">
+      {% if site.author.linkedin and site.author.linkedin != "" %}
       <li><a href="{{ site.author.linkedin }}" rel="me">LinkedIn</a></li>
+      {% endif %}
       {% if site.author.github and site.author.github != 'USERNAME' %}
       <li><a href="https://github.com/{{ site.author.github }}" rel="me">GitHub</a></li>
       {% endif %}
       <li><a href="{{ '/feed.xml' | relative_url }}">RSS</a></li>
     </ul>
-    <p class="site-footer__meta">&copy; {{ site.time | date: '%Y' }} Andrea Toscano, {{ site.author.location }}</p>
+    <p class="site-footer__meta">&copy; {{ site.time | date: '%Y' }} roving101, {{ site.author.location }}</p>
   </div>
 </footer>

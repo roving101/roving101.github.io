@@ -1,4 +1,4 @@
-title: Andrea Toscano
+title: roving101
 description: >-
   Incident response, threat hunting and digital forensics for enterprise
   environments. Security Consultant at Deloitte, Turin.
@@ -9,11 +9,11 @@ url: "https://roving101.github.io"
 baseurl: ""
 
 author:
-  name: Andrea Toscano
+  name: roving101
   # Professional email: when filled in, it appears in the intro and footer
   email: ""
   location: Turin, Italy
-  linkedin: https://www.linkedin.com/in/toscano-andrea
+  linkedin: ""
   github: roving101
 
 markdown: kramdown

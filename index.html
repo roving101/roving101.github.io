@@ -2,7 +2,7 @@
 layout: default
 ---
 <section class="intro" aria-labelledby="intro-title">
-  <h1 id="intro-title" class="intro__name">Andrea Toscano</h1>
+  <h1 id="intro-title" class="intro__name">roving101</h1>
   <p class="intro__role">Incident response &amp; threat hunting at Deloitte, Turin</p>
   <div class="intro__text">
     <p>I work in Deloitte&rsquo;s Crisis Management &amp; Incident Response team on threat hunting, incident response and digital forensics for enterprise environments. My work runs from hypothesis-driven hunts mapped to MITRE ATT&amp;CK to triage, containment and forensic reconstruction of attacker activity on Windows and Linux.</p>
@@ -10,7 +10,7 @@ layout: default
   </div>
   <ul class="links intro__links">
     {% if site.author.email != "" %}<li><a href="mailto:{{ site.author.email }}">Email</a></li>{% endif %}
-    <li><a href="{{ site.author.linkedin }}" rel="me">LinkedIn</a></li>
+    {% if site.author.linkedin and site.author.linkedin != "" %}<li><a href="{{ site.author.linkedin }}" rel="me">LinkedIn</a></li>{% endif %}
     {% if site.author.github and site.author.github != 'USERNAME' %}
     <li><a href="https://github.com/{{ site.author.github }}" rel="me">GitHub</a></li>
     {% endif %}

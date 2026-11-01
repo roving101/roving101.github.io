@@ -1,6 +1,6 @@
 # roving101.github.io
 
-Sito personale di Andrea Toscano, pubblicato con GitHub Pages e Jekyll. GitHub ricompila il sito in automatico a ogni modifica del branch `main`, di solito in uno o due minuti.
+Sito personale di roving101, pubblicato con GitHub Pages e Jekyll. GitHub ricompila il sito in automatico a ogni modifica del branch `main`, di solito in uno o due minuti.
 
 ## Pubblicare un write-up
 
